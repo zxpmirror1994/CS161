@@ -1,0 +1,56 @@
+Graph1:
+—— While trying 3 colors:
+c Rsat version 2.01
+c 
+c 
+s UNSATISFIABLE
+c CNF stats: (21 vars, 64 clauses)
+c Decisions: 12
+c Conflicts: 10
+c Running time: 0.00000 seconds
+The result indicates that the instance is unsatisfiable.
+
+—— While trying 4 colors:
+c Rsat version 2.01
+v -1 -28 -27 -26 25 -5 -9 -21 -24 -23 22 -14 -2 -18 -20 -19 17 -13 -16 15 -11 -12 10 -6 -8 7 -3 4 0
+c 
+c 
+s SATISFIABLE
+c CNF stats: (28 vars, 97 clauses)
+c Decisions: 11
+c Conflicts: 0
+c Running time: 0.00000 seconds
+The result indicates that the instance is satisfiable.
+
+These results tell me that there is at least one way coloring this graph properly with 4 colors, but no way coloring this graph properly with just 3 colors.
+
+One solution to properly color this graph with 4 colors (node index——color name):
+1——red, 2——green, 3——blue, 4——green, 5——yellow, 6——blue, 7——yellow
+
+Graph2:
+—— While trying 7 colors:
+c Rsat version 2.01
+c 
+c 
+s UNSATISFIABLE
+c CNF stats: (350 vars, 4985 clauses)
+c Decisions: 3800
+c Conflicts: 3186
+c Running time: 0.04400 seconds
+The result indicates that the instance is unsatisfiable.
+
+—— While trying 8 colors:
+c Rsat version 2.01
+v -51 -49 -50 -52 -53 -211 -209 -210 -212 -213 -214 -235 -233 -234 -107 -106 -105 -258 -257 -299 -297 -108 -236 -300 -131 -129 -305 -132 -260 -54 -239 -192 -191 -160 -109 -190 -294 110 -398 -390 -374 -366 -358 -326 -310 -286 -262 -182 -158 -126 -94 -62 -46 -22 -111 -112 -308 -237 238 -134 -382 -350 -334 -318 -302 -278 -270 -246 -230 -198 -150 -102 -86 -78 -70 -38 -14 -240 -283 -281 -282 -243 -241 -242 -67 -65 -244 -309 -68 -291 -290 -289 -186 -185 -188 -133 -154 298 -378 -362 -322 -306 -266 -250 -202 -194 -138 -130 -122 -98 -90 -66 -42 -34 -26 -18 -301 -303 -304 -159 -361 -364 -365 363 -387 -379 -371 -355 -347 -323 -315 -275 -267 -227 -195 -155 -99 -83 -75 -59 -35 -367 -368 153 -385 -377 -369 -353 -329 -313 -249 -225 -193 -137 -97 -1 -156 -157 -388 -389 -245 69 -397 -357 -325 -285 -269 -261 -205 -197 -173 -141 -125 -101 -61 -45 -37 -21 -5 -71 -72 -187 189 -333 -181 -165 284 -380 -348 -332 -268 -252 -204 -180 -164 -148 -140 -124 -92 -84 -76 -60 -4 -287 -288 381 -349 -317 -229 -29 -383 -384 -56 55 -391 -375 -359 -319 -295 -279 -271 -247 -231 -215 -199 -143 -135 -63 -23 216 -392 -376 -360 -336 -328 -296 -272 -264 -256 -208 -168 -152 -144 -128 -96 -64 -8 386 -394 -370 -354 -330 -162 -58 356 -372 -324 57 248 -352 -280 -104 -80 -40 -32 373 -277 -77 136 -73 -41 -17 -9 -400 -312 -176 -48 265 -81 -43 -259 263 -399 -327 -311 -255 -223 -207 -175 -167 -127 -119 -95 -47 321 -393 -337 -89 307 -395 -251 -203 -171 -163 -139 -123 -91 -19 121 142 -217 -169 -145 -113 -254 -222 -206 -174 -118 -6 253 -221 -149 -117 -85 44 -340 -292 -276 -220 -116 -100 -36 -28 -20 -12 103 74 293 -346 -314 -274 -226 -218 -178 -114 -82 -10 -79 273 -177 -161 93 -351 -343 -151 -87 -39 -31 -7 88 -344 -224 -184 -120 219 -339 -179 -147 -27 -11 -3 166 -342 201 33 345 146 24 -338 -170 -16 172 -196 200 115 183 -335 -15 331 13 396 341 2 -30 25 -320 316 -232 228 0
+c 
+c 
+s SATISFIABLE
+c CNF stats: (400 vars, 5890 clauses)
+c Decisions: 941
+c Conflicts: 557
+c Running time: 0.00000 seconds
+The result indicates that the instance is satisfiable.
+
+These results tell me that there is at least one way coloring this graph properly with 8 colors, but no way coloring this graph properly with just 7 colors. This means the minimum number of colors required to properly color this graph is 8.
+
+A solution with 8 colors can be obtained from the result above.

@@ -1,0 +1,91 @@
+Question 1:
+
+Testing-1:
+> (PAD 0)
+1
+> (PAD 1)
+1
+> (PAD 2)
+1
+> (PAD 3)
+2
+> (PAD 4)
+2
+> (PAD 5)
+3
+> (PAD 6)
+4
+> (PAD 7)
+5
+> (PAD 8)
+7
+> (PAD 9)
+9
+
+Testing-2:
+> (PAD 50)
+922111
+> (PAD 10000)
+
+*** - Program stack overflow. RESET
+
+My function works well for small N, but when N grows larger and larger, the time it takes to computer (PAD N) explodes. And if N is extremely large, I will be told “Program stack overflow. RESET”.
+
+Explanation:
+When N becomes very large, the number of calls on PAD will increase exponentially because of recursion. Each time we call on PAD itself, the stack frame contributes space for the procedure calls. As N becomes extremely large, there is not enough space to accommodate all calls, thus displaying a message of stack-overflow error.
+At Question 2, we can find the number of additions PAD takes to compute the Nth Padovan number. In fact, PAD takes 922000 additions to find merely the 50th Padovan number, which is time-consuming and onerous. 
+
+
+
+Question 2:
+
+Testing:
+> (SUMS 0)
+0
+> (SUMS 1)
+0
+> (SUMS 2)
+0
+> (SUMS 3)
+1
+> (SUMS 4)
+1
+> (SUMS 5)
+2
+> (SUMS 6)
+3
+> (SUMS 7)
+4
+> (SUMS 8)
+6
+> (SUMS 9)
+8
+
+By observation, PAD(N) = SUMS(N) + 1.
+
+Explanation:
+We can prove this by mathematical induction.
+Base case: When N = 0, 1 or 2, SUMS(N) = 0 since they are all pre-defined. Hence, PAD(N) = SUMS(N) + 1.
+Inductive steps: Suppose PAD(N) = SUMS(N) + 1 holds for first N Padovan number. We need to show that PAD(N+1) = SUMS(N+1) + 1 also holds. According to our formula, LHS = PAD(N+1) = PAD(N-1) + PAD(N-2) = (SUMS(N-1) + 1) + (SUMS(N-2) + 1) = (SUMS(N-1) + (SUMS(N-2) + 1) + 1. In fact, (SUMS(N-1) + (SUMS(N-2) + 1) = SUMS(N+1) holds because to compute PAD(N+1) we need to add the number of additions for PAD(N-1), which is SUMS(N-1), and the number of additions for PAD(N-2), which is SUMS(N-2), and 1, which is the addition of PAD(N-1) and PAD(N-2). Therefore, LHS = SUMS(N+1) + 1 = RHS.
+
+
+
+Question 3:
+
+Testing:
+> (ANON '42)
+?
+> (ANON 'FOO)
+?
+> (ANON '(((L E) F) T))
+(((? ?) ?) ?)
+> (ANON '(5 FOO 3.1 -0.2))
+(? ? ? ?)
+> (ANON '(1 (FOO 0.1) -0.2))
+(? (? ?) ?)
+> (ANON '(((1 2) (FOO 3.1)) (BAR -0.2)))
+(((? ?) (? ?)) (? ?))
+> (ANON '(R (I (G (H T)))))
+(? (? (? (? ?))))
+
+
